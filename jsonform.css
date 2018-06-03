@@ -1,0 +1,19 @@
+.formfield {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.formfield>label{
+    display: block;
+    margin: 8px 0 4px;
+}
+.formfield input, .formfield .container, .formfield select {
+    margin-left: 10px;
+    font-size: 1em;
+}
+.formfield input, .formfield select {
+    min-width: 220px;
+}
+.formfield input {
+    border-radius: 4px;
+    border: 1px solid #C0C0C0;
+    padding: 3px 10px;
+}

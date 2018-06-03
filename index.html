@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="./jsonform.js"></script>
+        <link rel="stylesheet" type="text/css" href="./jsonform.css">
+    </head>
+    <body>
+        <form id="existingForm" style="width: 40%; margin: 40px;">
+            <button type="submit" style="color: white; background-color: blue; margin: 12px; font-size: 1em; padding: 4px 8px; margin-left: 80%;">Submit</button>
+        </form>
+        <script>
+            window.onload = function() {
+                form = new JsonForm({
+                    "First Name: ": {"type": "text", "placeholder": "my name", "default": "John", "id": "myName", "required": false},
+                    "Age: ": {"type": "number", "placeholder": "my age", "default": 21, "id": "myAge", "required": true},
+                    "Gender: ": {"type": "select", "placeholder": "my gender", "default": "male", "id": "myGender", "options":["male", "female"], "required": "true"},
+                    "Eye Color: ": {"type": "radio", "default": "brown", "id": "eyeColor", "options":["brown", "blue"], "required": "true", "name": "eyecolor"},
+                    "Skills: ": {"type": "checkbox", "default": ["math", "science"], "id": "checkbox", "options":["math", "english", "science", "art"], "required": "true", "name": "skills"}
+                });
+                // form.id = "myForm"; // used below demo partial creation
+                // document.body.appendChild(form);
+
+                    // partial creation
+                // let myForm = document.getElementById("myForm");
+                // myForm.appendChild(new FormField({"type": "text", "placeholder": "my name", "default": "Smith", "id": "myName", "required": false}, "Last Name: "));
+
+                    // use in existing form
+                let existingForm = document.getElementById("existingForm");
+                existingForm.innerHTML = form.innerHTML + existingForm.innerHTML;
+            }
+        </script>
+    </body>
+</html>

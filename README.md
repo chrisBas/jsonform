@@ -1,4 +1,4 @@
-# Pages
+# Jsonform
 This mini js/css library enables someone to create a form or form fields from a simple json object.
 
 ## Sample
